@@ -19,7 +19,7 @@ export default function Expenses(props) {
             <ExpenseItem
               key={expense.id}
               title={expense.title}
-              price={expense.price}
+              amount={expense.amount}
               date={expense.date}
             />
           );

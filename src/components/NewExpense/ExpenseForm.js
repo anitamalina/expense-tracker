@@ -22,7 +22,7 @@ export default function ExpenseForm(props) {
 
   const dateChangeHandler = (event) => {
     setInput((prevState) => {
-      return { ...prevState, date: new Date(event.target.value) };
+      return { ...prevState, date: event.target.value };
     });
   };
 
@@ -35,7 +35,7 @@ export default function ExpenseForm(props) {
       date: new Date(input.date),
     };
 
-    props.onSaveExpenseDate(expenseData);
+    props.onSaveExpenseData(expenseData);
 
     setInput({
       title: "",
@@ -66,7 +66,7 @@ export default function ExpenseForm(props) {
         <input
           type="date"
           min="2019-01-01"
-          max="2022-12-31"
+          max="2030-12-31"
           value={input.date}
           onChange={dateChangeHandler}
         />

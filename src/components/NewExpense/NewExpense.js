@@ -4,15 +4,15 @@ import ExpenseForm from "./ExpenseForm";
 
 export default function NewExpense(props) {
   function saveExpenseDateHandler(expenseData) {
-    const ExpenseData = {
+    const newExpenseData = {
       id: Math.random().toString(),
       ...expenseData,
     };
-    props.onAddExpense(ExpenseData);
+    props.onAddExpense(newExpenseData);
   }
   return (
     <div className="new-expense">
-      <ExpenseForm onSaveExpenseDate={saveExpenseDateHandler} />
+      <ExpenseForm onSaveExpenseData={saveExpenseDateHandler} />
     </div>
   );
 }
